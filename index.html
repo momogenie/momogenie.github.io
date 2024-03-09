@@ -1,13 +1,16 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Momo Genie</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
     <link rel="icon" href="momogenie.jpg" type="image/jpeg">
+    <title>Momo Genie</title>
     <style>
       body {
-        font-family: 'Arial', sans-serif;
-        background-color: #f4f4f4;
+        font-family: 'DM Sans', sans-serif;
+        background: linear-gradient(135deg, #121212, #2b2b2b);
+        color: #fff;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -15,63 +18,109 @@
         margin: 0;
       }
 
-      .payment-container {
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        padding: 30px;
+      .mac-window {
+        background: linear-gradient(135deg, #1d1d1d, #383838);
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        padding: 40px;
         text-align: center;
+        max-width: 400px;
+        position: relative;
+      }
+
+      .mac-traffic-lights {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        display: flex;
+      }
+
+      .mac-traffic-light {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin-right: 8px;
+      }
+
+      .red {
+        background-color: #ff4757;
+      }
+
+      .yellow {
+        background-color: #ffa502;
+      }
+
+      .green {
+        background-color: #2ed573;
       }
 
       h1 {
-        color: #333;
+        color: #fff;
         margin-bottom: 20px;
+        font-weight: bold;
+        font-size: 24px;
       }
 
       p {
-        color: #555;
+        color: #ccc;
         margin-bottom: 20px;
+        font-size: 16px;
       }
 
       img {
-        max-width: 100%;
+        max-width: 264px;
+        width: 100%;
         height: auto;
-        border: 1px solid #ccc;
-        border-radius: 8px;
+        border: 1px solid #555;
+        border-radius: 12px;
         margin-top: 20px;
       }
 
       button {
-        background-color: #4caf50;
+        background: #ff4757;
+        /* Red color */
         color: white;
-        padding: 10px 20px;
-        font-size: 16px;
+        padding: 12px 24px;
+        font-size: 18px;
         border: none;
-        border-radius: 5px;
+        border-radius: 8px;
         cursor: pointer;
         transition: background-color 0.3s;
         text-decoration: none;
-        /* Add this line to remove default button underline */
+        font-weight: bold;
+        display: block;
+        margin: auto;
+        /* Center the button */
       }
 
       button:hover {
-        background-color: #45a049;
+        background: #d92741;
+        /* Darker shade of red on hover */
+      }
+
+      /* Remove blue line below links */
+      a {
+        text-decoration: none;
+        color: inherit;
       }
     </style>
   </head>
   <body>
-    <div class="payment-container">
+    <div class="mac-window">
+      <div class="mac-traffic-lights">
+        <div class="mac-traffic-light red"></div>
+        <div class="mac-traffic-light yellow"></div>
+        <div class="mac-traffic-light green"></div>
+      </div>
       <h1>Momo Genie</h1>
       <p>Scan the QR code or use the UPI ID to make a payment:</p>
       <!-- Display UPI ID -->
-      <p style="font-size: 18px; color: #333;">UPI ID: Q067570910@ybl</p>
+      <p style="font-size: 18px;">UPI ID: Q067570910@ybl</p>
       <!-- Display UPI Payment QR Code -->
-      <img src="qr.jpg" height="264" width="264" alt="UPI QR Code">
+      <img src="qr.jpg" alt="UPI QR Code">
       <!-- Pay Now Button as a link -->
-      <a href="upi://pay?mode=02&amp;pa=Q067570910@ybl&amp;purpose=00&amp;mc=5411&amp;pn=PhonePeMerchant&amp;orgid=180001&amp;sign=MEYCIQCFs+mvZ9Wg3LXMLj+IQkaPDfogefPWrqWAVE2qCS3tKwIhAI3+uMIUzXYC6Tba96w5KfGCneXwJ6he9z0KRzYjcjD8">
-        <center>
-          <button>Pay Now</button>
-        </center>
+      <a href="upi://pay?mode=02&pa=Q067570910@ybl&purpose=00&mc=5411&pn=PhonePeMerchant&orgid=180001&sign=MEYCIQCFs+mvZ9Wg3LXMLj+IQkaPDfogefPWrqWAVE2qCS3tKwIhAI3+uMIUzXYC6Tba96w5KfGCneXwJ6he9z0KRzYjcjD8">
+        <button>Pay Now</button>
       </a>
     </div>
   </body>
