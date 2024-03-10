@@ -17,7 +17,7 @@
     <!-- Replace with your actual logo image URL -->
     <meta name="twitter:url" content="https://momogenie.github.io/">
     <!-- Replace with your actual website URL -->
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&amp;display=swap" rel="stylesheet">
     <link rel="icon" href="momogenie.jpg" type="image/jpeg">
     <title>Momo Genie</title>
     <style>
@@ -54,6 +54,68 @@
         height: 12px;
         border-radius: 50%;
         margin-right: 8px;
+      }
+
+      .animate-contain {
+        height: 40px;
+        overflow: hidden;
+        text-align: center;
+        margin-top: 10px;
+      }
+
+      .animated-text {
+        display: inline-block;
+        transition: 500ms all;
+        margin-top: 0;
+        animation: slide 10s infinite alternate ease-in-out;
+        color: #fff;
+      }
+
+      .animated-text span {
+        display: block;
+        padding: 8px 5px;
+      }
+
+      @keyframes slide {
+        0% {
+          margin-top: 0;
+        }
+
+        10% {
+          margin-top: 0;
+        }
+
+        20% {
+          margin-top: -40px;
+        }
+
+        30% {
+          margin-top: -80px;
+        }
+
+        40% {
+          margin-top: -120px;
+        }
+
+        50% {
+          margin-top: -140px;
+        }
+
+        70% {
+          margin-top: -120px;
+        }
+
+        80% {
+          margin-top: -80px;
+        }
+
+        90% {
+          margin-top: -40px;
+        }
+
+        100% {
+          margin-top: 0;
+        }
       }
 
       .red {
@@ -127,13 +189,22 @@
         <div class="mac-traffic-light green"></div>
       </div>
       <h1>Momo Genie</h1>
+      <div class="animate-contain">
+        <div class="animated-text">
+          <span>⚠️You Are Paying To Momo Genie</span>
+          <span>⚠️Money will be debited from your account.</span>
+          <span>⚠️Name is verified ✅. You can proceed.</span>
+          <span>⚠️आप पेमेंट कर रहे है।</span>
+          <span>⚠️आपके खाते से पैसा डेबिट हो जाएगा।</span>
+        </div>
+      </div>
       <p>Scan the QR code or use the UPI ID to make a payment:</p>
       <!-- Display UPI ID -->
       <p style="font-size: 18px;">UPI ID: Q067570910@ybl</p>
       <!-- Display UPI Payment QR Code -->
-      <img src="qr.jpg" alt="UPI QR Code">
+      <img src="https://momogenie.github.io/qr.jpg" alt="UPI QR Code">
       <!-- Pay Now Button as a link -->
-      <a href="upi://pay?mode=02&pa=Q067570910@ybl&purpose=00&mc=5411&pn=PhonePeMerchant&orgid=180001&sign=MEYCIQCFs+mvZ9Wg3LXMLj+IQkaPDfogefPWrqWAVE2qCS3tKwIhAI3+uMIUzXYC6Tba96w5KfGCneXwJ6he9z0KRzYjcjD8">
+      <a href="upi://pay?mode=02&amp;pa=Q067570910@ybl&amp;purpose=00&amp;mc=5411&amp;pn=PhonePeMerchant&amp;orgid=180001&amp;sign=MEYCIQCFs+mvZ9Wg3LXMLj+IQkaPDfogefPWrqWAVE2qCS3tKwIhAI3+uMIUzXYC6Tba96w5KfGCneXwJ6he9z0KRzYjcjD8">
         <button>Pay Now</button>
       </a>
     </div>
